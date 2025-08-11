@@ -9,11 +9,13 @@ const Board = () => {
   ];
   return (
     <section>
-      <h1>게시글</h1>
-      <ul>
+      <h1>Board</h1>
+      <ul className="list">
         {dummy.map((b) => (
           <li key={b.id}>
-            <Link to={`/board/${b.id}`}>{b.id} - {b.title}</Link>
+            <Link to={`/board/${b.id}`}>
+              {b.id} - {b.title}
+            </Link>
           </li>
         ))}
       </ul>

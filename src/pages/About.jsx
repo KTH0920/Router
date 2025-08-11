@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const infoList = [
@@ -12,6 +13,15 @@ const About = () => {
   return (
     <section>
       <h1>About 페이지</h1>
+      <ul className="list">
+        {infoList.map((i) => (
+          <li key={i.id}>
+            <Link to={`/about/${i.id}`}>
+              {i.id} - {i.desc}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };
